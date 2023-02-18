@@ -24,5 +24,10 @@ namespace MenuBar
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("New Project clicked!");
+        }
     }
 }
