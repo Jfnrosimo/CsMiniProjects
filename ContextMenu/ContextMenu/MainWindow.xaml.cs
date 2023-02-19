@@ -32,9 +32,17 @@ namespace ContextMenu
 
         private void miBold_Unchecked(object sender, RoutedEventArgs e)
         {
-            myTextBox.FontStyle = FontStyles.Normal;
+            myTextBox.FontWeight = FontWeights.Normal;
         }
 
+        private void miItalic_Checked(object sender, RoutedEventArgs e)
+        {
+            myTextBox.FontStyle = FontStyles.Italic;
+        }
 
+        private void miItalic_Unchecked(object sender, RoutedEventArgs e)
+        {
+            myTextBox.FontStyle = FontStyles.Normal;
+        }
     }
 }

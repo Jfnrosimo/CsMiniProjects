@@ -12,9 +12,16 @@
             Name="myTextBox">
             <TextBox.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="Bold" x:Name="miBold" IsCheckable="True" Checked="miBold_Checked" Unchecked="miBold_Unchecked" 
+                    <MenuItem Header="Bold" x:Name="miBold" 
+                              IsCheckable="True" 
+                              Checked="miBold_Checked" 
+                              Unchecked="miBold_Unchecked" 
                               ></MenuItem>
-                    <MenuItem Header="Italic" x:Name="miItalic" Click="miItalic_Click" ></MenuItem>
+                    <MenuItem Header="Italic" x:Name="miItalic" 
+                              IsCheckable="True" 
+                              Checked="miItalic_Checked" 
+                              Unchecked="miItalic_Unchecked" 
+                              ></MenuItem>
                 </ContextMenu>
             </TextBox.ContextMenu>
         </TextBox>
