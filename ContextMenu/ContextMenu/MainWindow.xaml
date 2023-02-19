@@ -25,5 +25,16 @@
                 </ContextMenu>
             </TextBox.ContextMenu>
         </TextBox>
+        <Button Name="myButton" Content="Click me">
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Change Text" Click="MenuItem_Click" >
+                        <MenuItem.Icon>
+                            <Image Source="https://cdn.toucharcade.com/wp-content/uploads/2015/07/shut-up-and-take-my-money.jpg" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
     </StackPanel>
 </Window>

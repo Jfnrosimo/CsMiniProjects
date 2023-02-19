@@ -44,5 +44,10 @@ namespace ContextMenu
         {
             myTextBox.FontStyle = FontStyles.Normal;
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            myButton.Content = "Please don't click me!";
+        }
     }
 }
