@@ -24,5 +24,17 @@ namespace ContextMenu
         {
             InitializeComponent();
         }
+
+        private void miBold_Checked(object sender, RoutedEventArgs e)
+        {
+            myTextBox.FontWeight = FontWeights.Bold;
+        }
+
+        private void miBold_Unchecked(object sender, RoutedEventArgs e)
+        {
+            myTextBox.FontStyle = FontStyles.Normal;
+        }
+
+
     }
 }

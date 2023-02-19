@@ -6,7 +6,17 @@
         xmlns:local="clr-namespace:ContextMenu"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <TextBox 
+            Height="200" 
+            Name="myTextBox">
+            <TextBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Bold" x:Name="miBold" IsCheckable="True" Checked="miBold_Checked" Unchecked="miBold_Unchecked" 
+                              ></MenuItem>
+                    <MenuItem Header="Italic" x:Name="miItalic" Click="miItalic_Click" ></MenuItem>
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
+    </StackPanel>
 </Window>
