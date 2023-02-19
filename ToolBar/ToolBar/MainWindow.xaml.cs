@@ -33,11 +33,26 @@ namespace ToolBar
             }
             else
             {
-
-            myTextBox.Text = "";
-            MessageBox.Show("Text has been deleted!");
+                myTextBox.Text = "";
+                MessageBox.Show("Text has been deleted!");
             }
             
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox cbox = (ComboBox)sender;
+            ComboBoxItem cbItem = (ComboBoxItem)cbox.SelectedItem;
+            string newFontSize = (string)cbItem.Content;
+
+            int temp;
+            if(Int32.TryParse(newFontSize, out temp)) 
+            { 
+                if(myTextBox != null)
+                {
+                    myTextBox.FontSize= temp;
+                }
+            }
         }
     }
 }

@@ -10,9 +10,17 @@
     <DockPanel >
         <ToolBarTray DockPanel.Dock="Top" x:Name="mainToolbar">
             <ToolBar>
-                <Button Click="Button_Click">
+                <Button Click="Button_Click" ToolTip="Delete Text">
                     <Image Width="20" Source="https://cdn-icons-png.flaticon.com/512/484/484611.png" />
                 </Button>
+				<Separator />
+				<Label>Font Size:</Label>
+				<ComboBox Name="cb1" SelectionChanged="ComboBox_SelectionChanged" >
+					<ComboBoxItem>8</ComboBoxItem>
+					<ComboBoxItem IsSelected="True">10</ComboBoxItem>
+					<ComboBoxItem>12</ComboBoxItem>
+					<ComboBoxItem>14</ComboBoxItem>
+				</ComboBox>
             </ToolBar>
         </ToolBarTray>
         <TextBox x:Name="myTextBox" Text="Hello"></TextBox>
