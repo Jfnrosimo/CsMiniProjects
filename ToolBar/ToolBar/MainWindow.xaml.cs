@@ -27,9 +27,16 @@ namespace ToolBar
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if(myTextBox.Text == "")
+            {
+                MessageBox.Show("Text is empty!");
+            }
+            else
+            {
+
             myTextBox.Text = "";
             MessageBox.Show("Text has been deleted!");
-
+            }
             
         }
     }
