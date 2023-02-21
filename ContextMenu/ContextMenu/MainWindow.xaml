@@ -1,0 +1,40 @@
+﻿<Window x:Class="ContextMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContextMenu"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBox 
+            Height="200" 
+            Name="myTextBox">
+            <TextBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Bold" x:Name="miBold" 
+                              IsCheckable="True" 
+                              Checked="miBold_Checked" 
+                              Unchecked="miBold_Unchecked" 
+                              ></MenuItem>
+                    <MenuItem Header="Italic" x:Name="miItalic" 
+                              IsCheckable="True" 
+                              Checked="miItalic_Checked" 
+                              Unchecked="miItalic_Unchecked" 
+                              ></MenuItem>
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
+        <Button Name="myButton" Content="Click me">
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Change Text" Click="MenuItem_Click" >
+                        <MenuItem.Icon>
+                            <Image Source="https://cdn.toucharcade.com/wp-content/uploads/2015/07/shut-up-and-take-my-money.jpg" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+    </StackPanel>
+</Window>
