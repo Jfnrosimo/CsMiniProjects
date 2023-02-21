@@ -82,8 +82,8 @@ public class cardHolder
         {
             Console.WriteLine("How much money would you like to deposit?: ");
             double deposit = Double.Parse(Console.ReadLine());
-            currentUser.setBalance(deposit + currentBalance);
-            Console.WriteLine("Thank you for your deposit. Your new balance is "
+            currentUser.setBalance(deposit + currentUser.getBalance());
+            Console.WriteLine("Thank you for your deposit. Your new balance is: Php"
                 + currentUser.getBalance());
         }
 
@@ -98,6 +98,62 @@ public class cardHolder
             else
             {
                 currentUser.setBalance(currentUser.getBalance() - withdraw);
+                Console.WriteLine("You have successfully withdrew: Php" + withdraw);
+            }
+        }
+
+        void balance(cardHolder currentUser)
+        {
+            Console.WriteLine("Your current balance is: Php" + currentUser.getBalance());
+        }
+
+        List<cardHolder> cardHolders = new List<cardHolder>();
+        cardHolders.Add(new cardHolder("1284756473847584", 1234, "Jj", "Duncan", 20000));
+        cardHolders.Add(new cardHolder("4546756473847584", 4567, "Lama", "Dev", 4000));
+        cardHolders.Add(new cardHolder("9875756473847584", 4389, "John", "Mario", 8000));
+        cardHolders.Add(new cardHolder("0868756473847584", 1094, "Ben", "Hur", 60000));
+        cardHolders.Add(new cardHolder("4567756473847584", 8790, "John", "Doe", 120000));
+
+        //Prompt user
+        Console.WriteLine("Welcome to MoneyStorage");
+        Console.WriteLine("Please insert your debit card: ");
+        String debitCardNum = "";
+        cardHolder currentUser;
+
+        while (true)
+        {
+            try
+            {
+                debitCardNum = Console.ReadLine();
+
+                //Check against our db
+                currentUser = cardHolders.FirstOrDefault(a => a.cardNum == debitCardNum);
+                if (currentUser != null) { break; }
+                else { Console.WriteLine("Card is not recognized. Please try again."); }
+
+            }
+            catch
+            {
+                Console.WriteLine("Card not recognized. Please try again");
+            }
+        }
+
+        Console.WriteLine("Please enter your pin: ");
+        int userPin = 0;
+        while (true)
+        {
+            try
+            {
+                userPin = int.Parse(Console.ReadLine());
+
+                //Check against our db
+                if (currentUser.getPin() == userPin) { break; }
+                else { Console.WriteLine("Incorrect pin code!"); }
+
+            }
+            catch
+            {
+                Console.WriteLine("Incorrect pin code!");
             }
         }
     }
