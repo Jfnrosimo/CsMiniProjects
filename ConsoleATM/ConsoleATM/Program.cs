@@ -91,9 +91,9 @@ public class cardHolder
         {
             Console.WriteLine("How much money would you like to withdraw?: ");
             double withdraw = Double.Parse(Console.ReadLine());
-            if(currentUser.getBalance() > withdraw)
+            if(currentUser.getBalance() < withdraw)
             {
-                Console.WriteLine("Insufficient balance: ");
+                Console.WriteLine("Insufficient balance!");
             }
             else
             {
@@ -148,13 +148,36 @@ public class cardHolder
 
                 //Check against our db
                 if (currentUser.getPin() == userPin) { break; }
-                else { Console.WriteLine("Incorrect pin code!"); }
+                else { Console.WriteLine("Incorrect pin code! Please try again."); }
 
             }
             catch
             {
-                Console.WriteLine("Incorrect pin code!");
+                Console.WriteLine("Incorrect pin code! Please try again.");
             }
         }
+
+        Console.WriteLine("Welcome " + currentUser.getFirstName() + " " + currentUser.getLastName());
+        int option = 0;
+
+        do
+        {
+            printOptions();
+            try
+            {
+                option = int.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Something went wrong!");
+            }
+            if(option == 1) { deposit(currentUser); }
+            else if(option == 2) { withdraw(currentUser); }
+            else if(option == 3) { balance(currentUser); } 
+            else if(option == 4) { break; }
+            else { option = 0; }
+        }
+        while (option != 4);
+        Console.WriteLine("Thank you!");
     }
 }
