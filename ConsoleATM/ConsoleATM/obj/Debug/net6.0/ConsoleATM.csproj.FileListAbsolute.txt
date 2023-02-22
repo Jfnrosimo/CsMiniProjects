@@ -1,0 +1,15 @@
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\bin\Debug\net6.0\ConsoleATM.exe
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\bin\Debug\net6.0\ConsoleATM.deps.json
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\bin\Debug\net6.0\ConsoleATM.runtimeconfig.json
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\bin\Debug\net6.0\ConsoleATM.dll
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\bin\Debug\net6.0\ConsoleATM.pdb
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\ConsoleATM.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\ConsoleATM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\ConsoleATM.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\ConsoleATM.AssemblyInfo.cs
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\ConsoleATM.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\ConsoleATM.dll
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\refint\ConsoleATM.dll
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\ConsoleATM.pdb
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\ConsoleATM.genruntimeconfig.cache
+C:\Users\Admin\source\repos\CsMiniProjects\ConsoleATM\ConsoleATM\obj\Debug\net6.0\ref\ConsoleATM.dll
