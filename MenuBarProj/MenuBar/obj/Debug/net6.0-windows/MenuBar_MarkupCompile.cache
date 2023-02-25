@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Admin\source\repos\MenuBarUI\MenuBar\obj\Debug\net6.0-windows\
+C:\Users\Admin\source\repos\CsMiniProjects\MenuBarProj\MenuBar\obj\Debug\net6.0-windows\
 MenuBar
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\Admin\source\repos\MenuBarUI\MenuBar\App.xaml
+C:\Users\Admin\source\repos\CsMiniProjects\MenuBarProj\MenuBar\App.xaml
 11407045341
 
 3-1233169557
-194237474483
+194101785492
 MainWindow.xaml;
 
-False
+True
 
