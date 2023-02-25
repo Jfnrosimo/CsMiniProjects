@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Admin\source\repos\CsMiniProjects\MenuBar\obj\Debug\net6.0-windows\
+C:\Users\Admin\source\repos\CsMiniProjects\MenuBar\obj\Release\net6.0-windows\
 MenuBar
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\Admin\source\repos\CsMiniProjects\MenuBar\App.xaml
 11407045341
 
