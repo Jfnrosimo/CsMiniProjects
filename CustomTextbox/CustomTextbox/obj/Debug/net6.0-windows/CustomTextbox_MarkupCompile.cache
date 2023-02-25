@@ -1,5 +1,5 @@
 ﻿CustomTextbox
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Admin\source\repos\CsMiniProjects\CustomTextbox\CustomTextbox\App.xaml
 21925916426
 
-6-143340051
+4-1766929408
 194101785492
 MainWindow.xaml;Views\UserControls\ClearableTextbox.xaml;
 
-True
+False
 
