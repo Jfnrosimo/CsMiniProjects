@@ -13,6 +13,7 @@ namespace MessageBoxFunc
             InitializeComponent();
         }
 
+        //For message box
         private void btnFire_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Do you Agree?", "You pressed fire",
@@ -28,6 +29,7 @@ namespace MessageBoxFunc
             }
         }
 
+        //For file dialog box
         private void btnFire2_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
