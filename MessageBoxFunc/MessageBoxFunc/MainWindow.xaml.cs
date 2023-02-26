@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MessageBoxFunc
 {
@@ -38,6 +26,47 @@ namespace MessageBoxFunc
             {
                 tbInfo.Text = "Not Agreed";
             }
+        }
+
+        private void btnFire2_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+
+            //Filter files on file dialogs
+            fileDialog.Filter = "PDF files | *.pdf";
+
+            //Set the initial directory
+            fileDialog.InitialDirectory = "C:\\Users\\Admin\\Downloads";
+
+            //Set dialog box title
+            fileDialog.Title = "Please pick your pdf file/s";
+
+            //Allow selecting multiple files
+            fileDialog.Multiselect = true;
+
+            bool? success = fileDialog.ShowDialog();
+
+            if(success == true)
+            {
+                string path = fileDialog.FileName;
+
+                //For filename only
+                string fileName = fileDialog.SafeFileName;
+
+                tbInfo2.Text = "This is the path: " +path +" | " +"This is the filename only: " +fileName;
+
+                //For multiple files
+                //string[] paths = fileDialog.FileNames;
+                //string[] fileNames = fileDialog.SafeFileNames;
+
+
+            }
+            else
+            {
+
+            }
+
+
         }
     }
 }

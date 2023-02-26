@@ -24,7 +24,7 @@
         
         <!--File dialog-->
         <Button Grid.Column="1" Name="btnFire2" Content="Fire" Height="40" Width="100"
-                Click="btnFire_Click"/>
+                Click="btnFire2_Click"/>
         <TextBlock Grid.Column="1" Grid.Row="2" Name="tbInfo2" FontFamily="16"
                  VerticalAlignment="Center" HorizontalAlignment="Center"/>
     </Grid>
