@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using Winforms = System.Windows.Forms; //Initialize winforms to avoid abiguity
+using WinForms = System.Windows.Forms; //Initialize winforms/ use alias to avoid abiguity
 
 namespace DialogBoxFunc
 {
@@ -16,10 +16,19 @@ namespace DialogBoxFunc
         private void btnOpen_Click(object sender, RoutedEventArgs e)
         {
             WinForms.FolderBrowserDialog dialog = new WinForms.FolderBrowserDialog();
+            dialog.InitialDirectory = "C:\\Users\\Admin\\Downloads";
             dialog.ShowDialog();
+            WinForms.DialogResult dialogResult = dialog.ShowDialog();
 
-            //Ambiguity issue on winforms and WPF
-            MessageBox.Show();
+            if(dialogResult == WinForms.DialogResult.OK)
+            {
+                string folder = dialog.SelectedPath;
+            }
+            else
+            {
+                
+            }
+
         }
 
         
