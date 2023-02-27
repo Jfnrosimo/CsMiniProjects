@@ -15,7 +15,22 @@
         </Grid.RowDefinitions>
 
         <Rectangle Fill="Red" />
-        <Rectangle Grid.Row="1" Fill="Green" />
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Rectangle Fill="Yellow" Grid.Column="0"/>
+            <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch"/>
+            <Rectangle Fill="Purple" Grid.Column="2"/>
+            <GridSplitter Grid.Column="3" HorizontalAlignment="Stretch"/>
+            <Rectangle Fill="Orange" Grid.Column="4"/>
+        </Grid>
 
         <GridSplitter Grid.Row="2" HorizontalAlignment="Stretch"/>
 
