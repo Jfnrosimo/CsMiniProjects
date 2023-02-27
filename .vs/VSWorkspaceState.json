@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
+    "\\ListView"
+=======
     "\\ObservableCollectionLv\\ObservableCollectionLv\\bin"
+>>>>>>> main
   ],
+  "SelectedNode": "\\ListView\\ListView.sln",
   "PreviewInSolutionExplorer": false
 }
