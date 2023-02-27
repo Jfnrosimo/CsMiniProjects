@@ -31,6 +31,6 @@
                 HorizontalAlignment="Left" Margin="100 0 0 0"/>
 
         <ListView Name="lvEntries" Grid.Row="1" Grid.ColumnSpan="2" 
-                  SelectionMode="Extended"/>
+                  SelectionMode="Extended" ItemsSource="{Binding Entries}"/>
     </Grid>
 </Window>
