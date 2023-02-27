@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackPanelUI", "StackPanelUI\StackPanelUI.csproj", "{7710BB33-9FB4-416A-B6F0-25C23CB39ACD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7710BB33-9FB4-416A-B6F0-25C23CB39ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7710BB33-9FB4-416A-B6F0-25C23CB39ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7710BB33-9FB4-416A-B6F0-25C23CB39ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7710BB33-9FB4-416A-B6F0-25C23CB39ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB4F7FB8-EB5B-4811-B32F-3C620ACFB998}
+	EndGlobalSection
+EndGlobal
