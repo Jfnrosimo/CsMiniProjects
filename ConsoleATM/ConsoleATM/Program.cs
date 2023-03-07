@@ -1,114 +1,113 @@
-﻿public class cardHolder
+﻿public class cardHolder1
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string CardNumber { get; set; }
-    public int Pin { get; set; }
     public double Balance { get; set; }
+    public int Pin { get; set; }
 
-    public cardHolder(string firstName, string lastName, string cardNumber, int pin, double balance)
+
+    public cardHolder1 (string firstName, string lastName, string cardNumber,  int pin, double balance)
     {
         FirstName = firstName;
         LastName = lastName;
         CardNumber = cardNumber;
-        Pin = pin;
         Balance = balance;
+        Pin = pin;
     }
-    
 
     public static void Main(string[] args)
     {
         void displayOptions()
         {
-            Console.WriteLine("Please choose your options...");
+            Console.WriteLine("Please choose your option...");
             Console.WriteLine("1. Deposit");
             Console.WriteLine("2. Withdraw");
             Console.WriteLine("3. Show Balance");
             Console.WriteLine("4. Exit");
         }
 
-        void deposit( cardHolder currentUser)
+        void deposit(cardHolder1 currentUser)
         {
-            Console.WriteLine("How much money would you like to deposit?");
+            Console.WriteLine("Please input your desired deposit.");
             double deposit = Double.Parse(Console.ReadLine());
-            currentUser.Balance = currentUser.Balance + deposit;
-            Console.WriteLine("Thank you for your deposit. Your new balance is: Php"
-                    + currentUser.Balance);
+            currentUser.Balance += deposit;
+            Console.WriteLine($"Your new balance is now {currentUser.Balance} pesos. Thank you for using our services");
         }
 
-        void withdraw(cardHolder currentUser)
+        void withdraw(cardHolder1 currentUser)
         {
-            Console.WriteLine("How much money would you like to withdraw?: ");
-                        double withdraw = Double.Parse(Console.ReadLine());
-                        if(currentUser.Balance < withdraw)
-                        {
-                            Console.WriteLine("Insufficient balance!");
-                        }
-                        else
-                        {
-                            currentUser.Balance = (currentUser.Balance - withdraw);
-                            Console.WriteLine("You have successfully withdrew: Php" + withdraw);
-                Console.WriteLine("Your new balance is: Php " + currentUser.Balance);
-                        }
+            Console.WriteLine("Please input your desired withdrawal.");
+            double withdraw = Double.Parse(Console.ReadLine());
+            if(currentUser.Balance < withdraw)
+            {
+                Console.WriteLine("Sorry you dont have enough fund to withdraw such amount.");
+            }
+            else
+            {
+                currentUser.Balance -= withdraw;
+                Console.WriteLine($"You have successfully withrawn {withdraw} pesos. Your new balance is {currentUser.Balance}");
+            }
         }
 
-        void balance(cardHolder currentUser)
+        void balance(cardHolder1 currentUser)
         {
-            Console.WriteLine("Your current balance is: Php" + currentUser.Balance);
+            Console.WriteLine($"Your current balance is {currentUser.Balance}");
         }
 
-        List<cardHolder> cardHolders = new List<cardHolder>();
-                cardHolders.Add(new cardHolder( "Jj", "Duncan", "1284756473847584", 1234, 20000));
-                cardHolders.Add(new cardHolder( "Lama", "Dev", "4546756473847584", 4567, 4000));
-                cardHolders.Add(new cardHolder("John", "Mario", "9875756473847584", 4389, 8000));
-                cardHolders.Add(new cardHolder("Ben", "Hur", "0868756473847584", 1094, 60000));
-                cardHolders.Add(new cardHolder("John", "Doe", "4567756473847584", 8790, 120000));
+        List<cardHolder1> cardHolders = new List<cardHolder1>();
+            cardHolders.Add(new cardHolder1("Jj", "Duncan", "1284756473847584", 1234, 20000));
+            cardHolders.Add(new cardHolder1("Lama", "Dev", "4546756473847584", 4567, 4000));
+            cardHolders.Add(new cardHolder1("John", "Mario", "9875756473847584", 4389, 8000));
+            cardHolders.Add(new cardHolder1("Ben", "Hur", "0868756473847584", 1094, 60000));
+            cardHolders.Add(new cardHolder1("John", "Doe", "4567756473847584", 8790, 120000));
 
-        //Prompt user
+        //Prompt the user
         Console.WriteLine("Welcome to MoneyStorage");
-        Console.WriteLine("Please insert your debit card: ");
-        String debitCardNum = "";
-        cardHolder currentUser;
+        Console.WriteLine("Please insert your debit card.");
+        string debitCardNumber = "";
+        cardHolder1 currentUser;
 
         while (true)
         {
             try
             {
-                debitCardNum = Console.ReadLine();
+                debitCardNumber = Console.ReadLine();
 
-                //Check against our db
-                currentUser = cardHolders.FirstOrDefault(a => a.CardNumber == debitCardNum);
-                if (currentUser != null) { break; }
+                //Check if debit card number is found in db
+                currentUser = cardHolders.FirstOrDefault(a => a.CardNumber == debitCardNumber);
+                if(currentUser != null) { break; }
                 else { Console.WriteLine("Card is not recognized. Please try again."); }
-
             }
             catch
             {
-                Console.WriteLine("Card not recognized. Please try again");
+                Console.WriteLine("Something went wrong. Please try again.");
             }
         }
 
-        Console.WriteLine("Please enter your pin: ");
-        int userPin = 0;
+        //If card i accepted do this
+        Console.WriteLine("Please enter your pin number");
+        int pin = 0;
+
         while (true)
         {
             try
             {
-                userPin = int.Parse(Console.ReadLine());
+                pin = int.Parse(Console.ReadLine());
 
-                //Check against our db
-                if (currentUser.Pin == userPin) { break; }
-                else { Console.WriteLine("Incorrect pin code! Please try again."); }
-
+                //Check if pin matches the card
+                if(currentUser.Pin == pin) { break; }
+                else { Console.WriteLine("Incorrect pin! Please try again."); }
             }
             catch
             {
-                Console.WriteLine("Incorrect pin code! Please try again.");
+                Console.WriteLine("Incorrent pin code.");
             }
         }
 
-        Console.WriteLine("Welcome " + currentUser.FirstName + " " + currentUser.LastName);
+        Console.WriteLine($"Welcome {currentUser.FirstName}");
         int option = 0;
+
 
         do
         {
@@ -121,13 +120,17 @@
             {
                 Console.WriteLine("Something went wrong!");
             }
-            if(option == 1) { deposit(currentUser); }
-            else if(option == 2) { withdraw(currentUser); }
-            else if(option == 3) { balance(currentUser); } 
-            else if(option == 4) { break; }
+
+            if (option == 1) { deposit(currentUser); }
+            else if (option == 2) { withdraw(currentUser); }
+            else if (option == 3) { balance(currentUser); }
+            else if (option == 4) { break; }
             else { option = 0; }
         }
         while (option != 4);
-        Console.WriteLine("Thank you!");
+           
+        Console.WriteLine("Thank you for using our services.");
+
     }
-} 
+
+}
